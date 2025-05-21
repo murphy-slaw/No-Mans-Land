@@ -3,13 +3,11 @@ package com.farcr.nomansland.client.event;
 import com.farcr.nomansland.NoMansLand;
 import com.farcr.nomansland.client.NMLModelLayers;
 import com.farcr.nomansland.client.ambience.AmbienceHandler;
-import com.farcr.nomansland.client.model.BillhookBassModel;
-import com.farcr.nomansland.client.model.BuriedModel;
-import com.farcr.nomansland.client.model.GooseModel;
-import com.farcr.nomansland.client.model.MooseModel;
+import com.farcr.nomansland.client.model.*;
 import com.farcr.nomansland.client.model.deer.DeerModel;
 import com.farcr.nomansland.client.particle.*;
 import com.farcr.nomansland.client.renderer.*;
+import com.farcr.nomansland.common.entity.tortoise.Tortoise;
 import com.farcr.nomansland.common.registry.NMLFluids;
 import com.farcr.nomansland.common.registry.NMLParticleTypes;
 import com.farcr.nomansland.common.registry.entities.NMLEntities;
@@ -46,6 +44,7 @@ public class ClientSetupEvents {
         event.registerEntityRenderer(NMLEntities.DEER.get(), DeerRenderer::new);
         event.registerEntityRenderer(NMLEntities.GOOSE.get(), GooseRenderer::new);
         event.registerEntityRenderer(NMLEntities.MOOSE.get(), MooseRenderer::new);
+        event.registerEntityRenderer(NMLEntities.TORTOISE.get(), TortoiseRenderer::new);
 
         event.registerEntityRenderer(NMLEntities.FIREBOMB.get(), FirebombRenderer::new);
         event.registerEntityRenderer(NMLEntities.EXPLOSIVE.get(), ExplosiveRenderer::new);
@@ -62,6 +61,8 @@ public class ClientSetupEvents {
         event.registerLayerDefinition(NMLModelLayers.DEER_LAYER, DeerModel::createBodyLayer);
 
         event.registerLayerDefinition(NMLModelLayers.GOOSE_LAYER, GooseModel::createBodyLayer);
+
+        event.registerLayerDefinition(NMLModelLayers.TORTOISE_LAYER, TortoiseModel::createBodyLayer);
     }
 
     @SubscribeEvent

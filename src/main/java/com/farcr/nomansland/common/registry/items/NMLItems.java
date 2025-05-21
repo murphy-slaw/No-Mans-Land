@@ -129,6 +129,9 @@ public class NMLItems {
             () -> new DeferredSpawnEggItem(NMLEntities.MOOSE, 4335898, 2497045, new Properties()));
     // egg color probably temporary - inverted deer lmao
 
+    public static final ItemDefinition<Item> TORTOISE_SPAWN_EGG = register("tortoise_spawn_egg", // TODO: color
+            () -> new DeferredSpawnEggItem(NMLEntities.TORTOISE, 4335898, 2497045, new Properties()));
+
 //    public static final ItemDefinition<Item> CAVE_CARP_BUCKET = registerItem("cave_carp_bucket",
 //            () -> new MobBucketItem(EntityType.PIG, Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH,
 //                    (new Properties()).stacksTo(1).component(DataComponents.BUCKET_ENTITY_DATA, CustomData.EMPTY)), true);
